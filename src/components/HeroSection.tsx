@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-forest.jpg";
 
-const transition = { duration: 0.8, ease: [0.2, 0, 0, 1] };
+const transition = { duration: 0.8, ease: [0.2, 0, 0, 1] as const };
 
 const HeroSection = () => {
   return (

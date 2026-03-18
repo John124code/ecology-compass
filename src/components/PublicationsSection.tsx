@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FileText } from "lucide-react";
 
-const transition = { duration: 0.5, ease: [0.2, 0, 0, 1] };
+const transition = { duration: 0.5, ease: [0.2, 0, 0, 1] as const };
 
 const publications = [
   { year: "2025", title: "Nitrogen cycling in sub-arctic peatlands: A 10-year longitudinal study.", journal: "Journal of Ecology, Vol 42", authors: "Mercer, A., Chen, L., Okafor, D." },

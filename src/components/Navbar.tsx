@@ -53,7 +53,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.2, 0, 0, 1] }}
+            transition={{ duration: 0.3, ease: [0.2, 0, 0, 1] as const }}
             className="md:hidden overflow-hidden bg-background border-b border-border"
           >
             <div className="flex flex-col gap-1 px-6 py-4">

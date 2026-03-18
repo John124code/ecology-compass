@@ -4,7 +4,7 @@ import aquaticImg from "@/assets/research-aquatic.jpg";
 import wildlifeImg from "@/assets/research-wildlife.jpg";
 import humanEnvImg from "@/assets/research-human-env.jpg";
 
-const transition = { duration: 0.5, ease: [0.2, 0, 0, 1] };
+const transition = { duration: 0.5, ease: [0.2, 0, 0, 1] as const };
 
 const areas = [
   {
