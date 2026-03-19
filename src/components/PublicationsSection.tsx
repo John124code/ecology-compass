@@ -48,7 +48,7 @@ const PublicationsSection = () => {
                   {pub.journal}. {pub.authors}.
                 </p>
               </div>
-              <div className="mt-2 sm:mt-0 sm:ml-8 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="mt-3 sm:mt-0 sm:ml-8 flex-shrink-0 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
                 <span className="inline-flex items-center gap-1.5 font-ui text-sm font-medium text-primary">
                   <FileText size={14} />
                   PDF

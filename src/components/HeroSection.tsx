@@ -46,18 +46,18 @@ const HeroSection = () => {
               Join the Lab
             </a>
           </div>
-          <div className="mt-12 flex gap-12 text-primary-foreground/70">
+          <div className="mt-12 grid grid-cols-3 gap-4 sm:gap-12 text-primary-foreground/70">
             <div>
-              <span className="block text-2xl font-display font-semibold text-primary-foreground">4,200+</span>
-              <span className="text-xs font-ui uppercase tracking-wide">Hectares monitored</span>
+              <span className="block text-xl sm:text-2xl font-display font-semibold text-primary-foreground">4,200+</span>
+              <span className="text-[10px] sm:text-xs font-ui uppercase tracking-wide">Hectares monitored</span>
             </div>
             <div>
-              <span className="block text-2xl font-display font-semibold text-primary-foreground">12</span>
-              <span className="text-xs font-ui uppercase tracking-wide">Longitudinal sites</span>
+              <span className="block text-xl sm:text-2xl font-display font-semibold text-primary-foreground">12</span>
+              <span className="text-[10px] sm:text-xs font-ui uppercase tracking-wide">Longitudinal sites</span>
             </div>
             <div>
-              <span className="block text-2xl font-display font-semibold text-primary-foreground">160+</span>
-              <span className="text-xs font-ui uppercase tracking-wide">Publications</span>
+              <span className="block text-xl sm:text-2xl font-display font-semibold text-primary-foreground">160+</span>
+              <span className="text-[10px] sm:text-xs font-ui uppercase tracking-wide">Publications</span>
             </div>
           </div>
         </motion.div>

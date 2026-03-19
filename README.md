@@ -1,73 +1,107 @@
-# Welcome to your Lovable project
+# Mercer Ecology Lab Website
 
-## Project info
+A modern, responsive website for the Mercer Ecology Lab — a research group dedicated to quantifying ecosystem resilience in the Anthropocene.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![React](https://img.shields.io/badge/React-18.3-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css)
+![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite)
 
-## How can I edit this code?
+## 🌿 About
 
-There are several ways of editing your application.
+This website showcases the Mercer Ecology Lab's research in ecosystem resilience, biodiversity dynamics, and conservation strategies across terrestrial and aquatic systems. The site features:
 
-**Use Lovable**
+- **Hero Section** — Introduction with key lab statistics
+- **About** — Lab mission and approach
+- **Research Areas** — Core research themes including terrestrial carbon sequestration, aquatic ecosystem dynamics, wildlife conservation, and human-environment interactions
+- **Publications** — Featured academic publications
+- **People** — Lab members and team
+- **Fieldwork** — Research sites and field activities
+- **News** — Latest updates and announcements
+- **Contact** — Inquiry form for prospective researchers
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🚀 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- npm or [Bun](https://bun.sh/)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd ecology-compass
 
-Follow these steps:
+# Install dependencies
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Scripts
 
-**Use GitHub Codespaces**
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Build for production |
+| `npm run build:dev` | Build in development mode |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run test` | Run tests with Vitest |
+| `npm run test:watch` | Run tests in watch mode |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🛠️ Tech Stack
 
-## What technologies are used for this project?
+- **Framework:** [React 18](https://react.dev/) with TypeScript
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Routing:** [React Router](https://reactrouter.com/)
+- **Forms:** [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- **Testing:** [Vitest](https://vitest.dev/) + [Playwright](https://playwright.dev/)
 
-This project is built with:
+## 📁 Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+ecology-compass/
+├── public/              # Static assets
+├── src/
+│   ├── assets/          # Images and media
+│   ├── components/      # React components
+│   │   ├── ui/          # Reusable UI components (shadcn)
+│   │   └── *.tsx        # Page sections
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility functions
+│   ├── pages/           # Page components
+│   ├── test/            # Test files
+│   ├── App.tsx          # Root component
+│   └── main.tsx         # Entry point
+├── index.html           # HTML template
+├── tailwind.config.ts   # Tailwind configuration
+├── vite.config.ts       # Vite configuration
+└── tsconfig.json        # TypeScript configuration
+```
 
-## How can I deploy this project?
+## 🧪 Testing
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```bash
+# Run all tests
+npm run test
 
-## Can I connect a custom domain to my Lovable project?
+# Run tests in watch mode
+npm run test:watch
+```
 
-Yes, you can!
+## 📄 License
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This project is private and not licensed for public use.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+*Built for the Mercer Ecology Lab — Department of Environmental Sciences*
