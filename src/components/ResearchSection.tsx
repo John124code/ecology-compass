@@ -109,7 +109,7 @@ const ResearchModal = ({ area, onClose }: { area: ResearchArea; onClose: () => v
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-foreground/60 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-foreground/60 backdrop-blur-sm overflow-hidden"
       onClick={onClose}
     >
       <motion.div
@@ -117,7 +117,7 @@ const ResearchModal = ({ area, onClose }: { area: ResearchArea; onClose: () => v
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={transition}
-        className="bg-card rounded-[16px] w-full max-w-3xl max-h-[90vh] overflow-y-auto card-shadow"
+        className="bg-card rounded-[16px] w-full max-w-3xl max-h-[90vh] overflow-y-auto overflow-x-hidden card-shadow"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Image */}
@@ -211,6 +211,24 @@ const ResearchModal = ({ area, onClose }: { area: ResearchArea; onClose: () => v
 const ResearchSection = () => {
   const [selectedArea, setSelectedArea] = useState<ResearchArea | null>(null);
 
+  const handleOpenModal = (area: ResearchArea) => {
+    setSelectedArea(area);
+    document.body.style.overflow = "hidden";
+    document.body.style.overflowX = "hidden";
+    document.documentElement.style.overflow = "hidden";
+    document.documentElement.style.overflowX = "hidden";
+    document.documentElement.style.width = "100%";
+  };
+
+  const handleCloseModal = () => {
+    setSelectedArea(null);
+    document.body.style.overflow = "unset";
+    document.body.style.overflowX = "unset";
+    document.documentElement.style.overflow = "unset";
+    document.documentElement.style.overflowX = "unset";
+    document.documentElement.style.width = "auto";
+  };
+
   return (
     <section id="research" className="py-24 bg-muted/50">
       <div className="container mx-auto px-6">
@@ -235,7 +253,7 @@ const ResearchSection = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ ...transition, delay: i * 0.1 }}
               whileHover={{ y: -4 }}
-              onClick={() => setSelectedArea(area)}
+              onClick={() => handleOpenModal(area)}
               className="group bg-card p-6 rounded-[12px] card-shadow cursor-pointer"
             >
               <div className="rounded-lg overflow-hidden image-outline">
@@ -259,7 +277,7 @@ const ResearchSection = () => {
       {/* Modal */}
       <AnimatePresence>
         {selectedArea && (
-          <ResearchModal area={selectedArea} onClose={() => setSelectedArea(null)} />
+          <ResearchModal area={selectedArea} onClose={handleCloseModal} />
         )}
       </AnimatePresence>
     </section>

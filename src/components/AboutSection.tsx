@@ -20,7 +20,7 @@ const AboutSection = () => {
             </h2>
             <div className="mt-6 space-y-4 font-body text-muted-foreground leading-relaxed text-wrap-pretty">
               <p>
-                The Mercer Ecology Lab is a university-affiliated research group dedicated to understanding the structure, function, and resilience of ecosystems under environmental change. Our work spans terrestrial and aquatic systems, with a focus on biodiversity dynamics, carbon cycling, and conservation biology.
+                The Racheal Ununuma Lab is a university-affiliated research group dedicated to understanding the structure, function, and resilience of ecosystems under environmental change. Our work spans terrestrial and aquatic systems, with a focus on biodiversity dynamics, carbon cycling, and conservation biology.
               </p>
               <p>
                 Founded in 2008, we combine long-term field monitoring with advanced analytical methods to produce data that informs both scientific understanding and environmental policy. Our team of faculty, postdoctoral researchers, and graduate students operates across 12 longitudinal field sites in temperate and sub-arctic regions.

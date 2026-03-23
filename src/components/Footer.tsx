@@ -4,13 +4,13 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <p className="font-display text-sm font-semibold text-foreground">Mercer Ecology Lab</p>
+            <p className="font-display text-sm font-semibold text-foreground">Racheal Ununuma Lab</p>
             <p className="font-body text-sm text-muted-foreground mt-1">
               Department of Environmental Sciences · University Campus
             </p>
           </div>
           <p className="font-ui text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Mercer Ecology Lab. All rights reserved.
+            © {new Date().getFullYear()} Racheal Ununuma Lab. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from  "framer-motion";
 import { Mail, MapPin } from "lucide-react";
 
 const transition = { duration: 0.5, ease: [0.2, 0, 0, 1] as const };
@@ -23,7 +23,7 @@ const ContactSection = () => {
                 We welcome applications from prospective PhD candidates, postdoctoral fellows, and visiting researchers with backgrounds in ecology, environmental science, biogeochemistry, or related fields.
               </p>
               <p>
-                Funded positions are listed on our institutional careers page. For informal inquiries about opportunities, please contact Dr. Mercer directly.
+                Funded positions are listed on our institutional careers page. For informal inquiries about opportunities, please contact Racheal Ununuma directly.
               </p>
             </div>
 
@@ -32,7 +32,7 @@ const ContactSection = () => {
                 <Mail size={18} className="text-primary mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-ui text-sm font-medium text-foreground">Email</p>
-                  <p className="font-body text-sm text-muted-foreground">mercer.lab@university.edu</p>
+                  <p className="font-body text-sm text-muted-foreground">racheal@university.edu</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const transition = { duration: 0.5, ease: [0.2, 0, 0, 1] as const };
 
 const faculty = [
-  { name: "Dr. Adrienne Mercer", role: "Principal Investigator", focus: "Ecosystem resilience, carbon cycling" },
+  { name: "Dr. Racheal Ununuma", role: "Principal Investigator", focus: "Ecosystem resilience, carbon cycling" },
   { name: "Dr. Lin Chen", role: "Associate Researcher", focus: "Soil biogeochemistry, microbial ecology" },
 ];
 
