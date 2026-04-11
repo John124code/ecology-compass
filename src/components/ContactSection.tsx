@@ -1,5 +1,5 @@
 import { motion } from  "framer-motion";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 
 const transition = { duration: 0.5, ease: [0.2, 0, 0, 1] as const };
 
@@ -14,16 +14,16 @@ const ContactSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={transition}
           >
-            <p className="font-ui text-xs uppercase tracking-[0.12em] text-secondary mb-3">Join the Lab</p>
+            <p className="font-ui text-xs uppercase tracking-[0.12em] text-secondary mb-3">Contact</p>
             <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground leading-tight tracking-tight">
-              We're looking for curious, rigorous researchers
+              Get in touch
             </h2>
             <div className="mt-6 space-y-4 font-body text-muted-foreground leading-relaxed text-wrap-pretty">
               <p>
-                We welcome applications from prospective PhD candidates, postdoctoral fellows, and visiting researchers with backgrounds in ecology, environmental science, biogeochemistry, or related fields.
+                I welcome inquiries from prospective PhD candidates, postdoctoral fellows, and visiting researchers with backgrounds in toxicology, marine biology, environmental science, or related fields.
               </p>
               <p>
-                Funded positions are listed on our institutional careers page. For informal inquiries about opportunities, please contact Racheal Ununuma directly.
+                For collaboration opportunities or general inquiries, please reach out via email or connect on LinkedIn.
               </p>
             </div>
 
@@ -32,7 +32,27 @@ const ContactSection = () => {
                 <Mail size={18} className="text-primary mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-ui text-sm font-medium text-foreground">Email</p>
-                  <p className="font-body text-sm text-muted-foreground">racheal@university.edu</p>
+                  <a href="mailto:Rachael.Chidugu-Ogborigbo@uwe.ac.uk" className="font-body text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Rachael.Chidugu-Ogborigbo@uwe.ac.uk
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Phone size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="font-ui text-sm font-medium text-foreground">Phone</p>
+                  <a href="tel:+441173281078" className="font-body text-sm text-muted-foreground hover:text-primary transition-colors">
+                    +44 117 328 1078
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Linkedin size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="font-ui text-sm font-medium text-foreground">LinkedIn</p>
+                  <a href="https://www.linkedin.com/in/rachael-ununuma-chidugu-ogborigbo-b7131770/" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Connect on LinkedIn
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -40,9 +60,10 @@ const ContactSection = () => {
                 <div>
                   <p className="font-ui text-sm font-medium text-foreground">Address</p>
                   <p className="font-body text-sm text-muted-foreground">
-                    Department of Environmental Sciences<br />
-                    Building C4, Room 312<br />
-                    University Campus, 10115
+                    HAS - Applied Sciences<br />
+                    UWE Bristol<br />
+                    Frenchay Campus, Coldharbour Lane<br />
+                    Bristol, BS16 1QY, United Kingdom
                   </p>
                 </div>
               </div>

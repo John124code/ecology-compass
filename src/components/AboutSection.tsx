@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import fieldworkImage from "@/assets/fieldwork-soil.jpg";
+
+// Marine sponge close-up
+const fieldworkImage = "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=1600&q=80";
 
 const transition = { duration: 0.6, ease: [0.2, 0, 0, 1] as const };
 
@@ -14,19 +16,19 @@ const AboutSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={transition}
           >
-            <p className="font-ui text-xs uppercase tracking-[0.12em] text-secondary mb-3">About the Lab</p>
+            <p className="font-ui text-xs uppercase tracking-[0.12em] text-secondary mb-3">About</p>
             <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground leading-tight tracking-tight">
-              Understanding ecosystems from the ground up
+              Pioneering research in ecogenotoxicology and marine natural products
             </h2>
             <div className="mt-6 space-y-4 font-body text-muted-foreground leading-relaxed text-wrap-pretty">
               <p>
-                The Racheal Ununuma Lab is a university-affiliated research group dedicated to understanding the structure, function, and resilience of ecosystems under environmental change. Our work spans terrestrial and aquatic systems, with a focus on biodiversity dynamics, carbon cycling, and conservation biology.
+                Dr. Rachael Chidugu-Ogborigbo is a Senior Lecturer in Biological Sciences at UWE Bristol, specializing in ecogenotoxicology—the biological effects of environmental contaminants at the molecular level. Her groundbreaking research investigates molecular, biochemical, and cellular responses of aquatic organisms to inorganic and organic pollutants.
               </p>
               <p>
-                Founded in 2008, we combine long-term field monitoring with advanced analytical methods to produce data that informs both scientific understanding and environmental policy. Our team of faculty, postdoctoral researchers, and graduate students operates across 12 longitudinal field sites in temperate and sub-arctic regions.
+                With a PhD in Environmental Toxicology from the University of Birmingham, Dr. Chidugu-Ogborigbo has made significant contributions to environmental science, including the discovery of a new sponge species, <em>Amorphinopsis kalibiama</em>, in the Niger Delta region of Nigeria. She developed and established for the first time the amenability of the alkaline comet assay and H2DCF-DA assay with cryopreserved sponge cells.
               </p>
               <p>
-                We are committed to open science, interdisciplinary collaboration, and training the next generation of ecological researchers.
+                Her research focuses on identifying sensitive biomarkers for biomonitoring and chemical risk assessments, exploring the therapeutic potential of marine natural products against Type II diabetes and cancer, and advancing environmental justice through scientific advocacy. She is committed to deploying sea sponges as model organisms for investigating genotoxicity mechanisms of aquatic pollutants.
               </p>
             </div>
           </motion.div>
@@ -41,7 +43,7 @@ const AboutSection = () => {
             <div className="rounded-lg overflow-hidden image-outline">
               <img
                 src={fieldworkImage}
-                alt="Researcher examining soil samples in the field"
+                alt="Colorful marine sponges in their natural habitat"
                 className="w-full aspect-[4/3] object-cover"
               />
             </div>

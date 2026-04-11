@@ -5,9 +5,12 @@ import { Menu, X } from "lucide-react";
 const links = [
   { label: "About", href: "#about" },
   { label: "Research", href: "#research" },
+  { label: "Grants & Awards", href: "#grants" },
   { label: "Publications", href: "#publications" },
   { label: "People", href: "#people" },
+  { label: "Teaching", href: "#teaching" },
   { label: "Fieldwork", href: "#fieldwork" },
+  { label: "Collaborators", href: "#collaborators" },
   { label: "News", href: "#news" },
   { label: "Contact", href: "#contact" },
 ];
@@ -19,7 +22,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
         <a href="#" className="font-display text-lg font-semibold text-foreground tracking-tight">
-          Racheal Ununuma Lab
+          Dr. Rachael Chidugu-Ogborigbo
         </a>
 
         {/* Desktop */}

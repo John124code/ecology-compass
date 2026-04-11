@@ -1,88 +1,90 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Users, Calendar, FileText, ArrowRight } from "lucide-react";
-import terrestrialImg from "@/assets/research-terrestrial.jpg";
-import aquaticImg from "@/assets/research-aquatic.jpg";
-import wildlifeImg from "@/assets/research-wildlife.jpg";
-import humanEnvImg from "@/assets/research-human-env.jpg";
+
+// Research area images from Unsplash
+const terrestrialImg = "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=1200&q=80"; // Microscope/cells
+const aquaticImg = "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=1200&q=80"; // Underwater marine life
+const wildlifeImg = "https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1200&q=80"; // Colorful coral/sponge
+const humanEnvImg = "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=1200&q=80"; // Industrial pollution
 
 const transition = { duration: 0.5, ease: [0.2, 0, 0, 1] as const };
 
 const areas = [
   {
-    title: "Terrestrial Carbon Sequestration",
-    description: "Quantifying carbon storage and flux across temperate and boreal forest ecosystems using eddy covariance towers and soil respiration chambers.",
-    image: terrestrialImg,
-    alt: "Moss-covered forest floor with ferns",
-    fullDetails: {
-      overview: "Our terrestrial carbon research program investigates how forests capture and store atmospheric carbon dioxide, contributing to climate change mitigation. We employ cutting-edge measurement technologies to quantify carbon fluxes at multiple scales, from individual soil plots to entire forest landscapes.",
-      objectives: [
-        "Measure net ecosystem carbon exchange across different forest types and age classes",
-        "Understand how climate variability affects seasonal and annual carbon budgets",
-        "Develop improved models for predicting forest carbon sequestration under future climate scenarios",
-        "Assess the impact of forest management practices on long-term carbon storage"
-      ],
-      methods: "We operate a network of eddy covariance flux towers that continuously measure CO₂, water vapor, and energy exchange between forests and the atmosphere. Complementing these tower measurements, we conduct intensive soil respiration campaigns using automated chamber systems, and perform regular forest inventory surveys to track biomass changes.",
-      team: ["Dr. Adrienne Mercer", "Dr. Lin Chen", "Renata Vasquez"],
-      duration: "2016 – Present",
-      publications: 28
-    }
-  },
-  {
-    title: "Aquatic Ecosystem Dynamics",
-    description: "Investigating nutrient cycling, primary productivity, and hydrological connectivity in freshwater wetlands and riparian systems.",
+    title: "Ecogenotoxicology & Marine Biomonitoring",
+    description: "Deploying sea sponges as model organisms to investigate genotoxicity mechanisms of aquatic pollutants, focusing on bioaccumulation of heavy metals, PAHs, organochlorines, and oil spill chemicals.",
     image: aquaticImg,
-    alt: "Wetland lake with reeds",
+    alt: "Marine sponge in aquatic environment",
     fullDetails: {
-      overview: "Freshwater ecosystems are critical for biodiversity, water quality, and carbon cycling, yet they remain among the most threatened habitats globally. Our aquatic research focuses on understanding the ecological processes that maintain healthy wetland and stream ecosystems.",
+      overview: "This research program investigates the biological effects of environmental contaminants at the molecular level, with a particular focus on marine organisms. Dr. Chidugu-Ogborigbo pioneered the use of sea sponges as biomonitoring organisms, discovering a new species (Amorphinopsis kalibiama) in the Niger Delta region and developing novel assay techniques for cryopreserved sponge cells.",
       objectives: [
-        "Quantify nutrient spiraling and retention in stream and wetland networks",
-        "Assess how hydrological connectivity influences aquatic biodiversity patterns",
-        "Monitor water quality changes in response to land-use and climate pressures",
-        "Evaluate the effectiveness of wetland restoration for ecosystem service recovery"
+        "Identify sensitive biomarkers for biomonitoring and chemical risk assessments in aquatic ecosystems",
+        "Investigate molecular, biochemical, and cellular responses of aquatic organisms to pollutants",
+        "Develop and validate genotoxicity assays using marine sponge models",
+        "Assess bioaccumulation patterns of heavy metals and organic pollutants in Niger Delta ecosystems"
       ],
-      methods: "We combine high-frequency water quality sensors, stable isotope tracers, and biodiversity surveys to understand nutrient and energy flow through aquatic food webs. Our team conducts seasonal sampling campaigns across a gradient of wetland conditions, from degraded agricultural ditches to pristine reference sites.",
-      team: ["Dr. Daniel Okafor", "Dr. Adrienne Mercer", "Sanjay Patel"],
-      duration: "2018 – Present",
-      publications: 19
-    }
-  },
-  {
-    title: "Wildlife Conservation Ecology",
-    description: "Assessing population viability, habitat connectivity, and human–wildlife conflict across fragmented landscapes.",
-    image: wildlifeImg,
-    alt: "Deer in grassland meadow",
-    fullDetails: {
-      overview: "As landscapes become increasingly fragmented by human development, wildlife populations face growing challenges to their long-term survival. Our conservation ecology research addresses the pressing need to understand how animals persist in human-dominated landscapes.",
-      objectives: [
-        "Model population viability for key indicator species under different management scenarios",
-        "Map habitat connectivity corridors essential for wildlife movement",
-        "Develop practical strategies for reducing human–wildlife conflict",
-        "Assess the effectiveness of protected area networks for biodiversity conservation"
-      ],
-      methods: "We use GPS telemetry, camera trap networks, and genetic sampling to track wildlife movements and population dynamics. These field data feed into spatially-explicit population models that help predict how species will respond to future landscape changes. We also work closely with local communities to understand and address human–wildlife conflict situations.",
-      team: ["Dr. Karin Johansson", "Renata Vasquez", "James Okwu"],
-      duration: "2017 – Present",
-      publications: 24
-    }
-  },
-  {
-    title: "Human–Environment Interactions",
-    description: "Examining land-use change, agricultural intensification, and their cascading effects on biodiversity and ecosystem services.",
-    image: humanEnvImg,
-    alt: "Agricultural landscape meeting forest edge",
-    fullDetails: {
-      overview: "Human activities have transformed over 70% of Earth's ice-free land surface, with profound consequences for ecological systems. Our research examines the complex feedbacks between human land use decisions and environmental outcomes, seeking pathways toward more sustainable landscapes.",
-      objectives: [
-        "Document rates and patterns of land-use change across study regions",
-        "Quantify how agricultural intensification affects pollinator communities and crop yields",
-        "Map ecosystem service provision across land-use gradients",
-        "Identify leverage points for improving sustainability in working landscapes"
-      ],
-      methods: "We integrate satellite remote sensing with ground-based ecological surveys to track landscape change and its consequences. Our pollinator research combines pan traps, transect surveys, and experimental plots to understand how farming practices affect wild bee communities. We use participatory mapping approaches to incorporate local knowledge into our analyses.",
-      team: ["Dr. Adrienne Mercer", "Mia Thornton", "Dr. Lin Chen"],
-      duration: "2019 – Present",
+      methods: "We employ cutting-edge molecular techniques including the alkaline comet assay and H2DCF-DA assay with cryopreserved sponge cells—methodologies established for the first time by our lab. Our research combines field sampling from polluted and reference sites, laboratory exposure studies, and advanced biochemical analyses to understand contaminant effects at the cellular level.",
+      team: ["Dr. Rachael Chidugu-Ogborigbo", "Dr. Silas Fagbero", "Mr. Sunday Nkopuyo"],
+      duration: "2014 – Present",
       publications: 15
+    }
+  },
+  {
+    title: "Marine Natural Products for Drug Discovery",
+    description: "Exploring the therapeutic potential of newly discovered sea sponge species (A. kalibiama) against Type II diabetes and cancer through novel extremozymes and bioactive compounds.",
+    image: wildlifeImg,
+    alt: "Marine sponge research",
+    fullDetails: {
+      overview: "Marine organisms produce unique bioactive compounds with significant pharmaceutical potential. Our research focuses on characterizing novel compounds from the newly discovered sponge species Amorphinopsis kalibiama, investigating their therapeutic applications in treating metabolic diseases and cancer.",
+      objectives: [
+        "Isolate and characterize novel bioactive compounds from marine sponges",
+        "Evaluate therapeutic efficacy of marine natural products against Type II diabetes",
+        "Investigate anticancer properties of sponge-derived compounds",
+        "Discover and characterize novel extremozymes for biotechnological applications"
+      ],
+      methods: "Our approach integrates marine biodiscovery with pharmacological screening. We conduct bioassay-guided fractionation to isolate active compounds, employ cell culture models to test biological activity, and use molecular techniques to identify and clone genes encoding novel enzymes. This work bridges marine ecology, chemistry, and pharmaceutical sciences.",
+      team: ["Dr. Rachael Chidugu-Ogborigbo", "Dr. Ibidapo William", "Dr. Jude Ihugba"],
+      duration: "2016 – Present",
+      publications: 8
+    }
+  },
+  {
+    title: "Environmental Justice & Advocacy",
+    description: "Advancing environmental justice through scientific research on pollution impacts in underserved communities, with particular focus on the Niger Delta region's environmental challenges.",
+    image: humanEnvImg,
+    alt: "Environmental research in Niger Delta",
+    fullDetails: {
+      overview: "Environmental contamination disproportionately affects marginalized communities worldwide. Our environmental justice research documents pollution impacts in the Niger Delta and other vulnerable regions, producing scientific evidence to support policy reform and community advocacy efforts.",
+      objectives: [
+        "Document environmental contamination patterns in underserved communities",
+        "Assess health and ecological impacts of industrial pollution in the Niger Delta",
+        "Provide scientific evidence to support environmental policy reform",
+        "Empower local communities through participatory research approaches"
+      ],
+      methods: "We combine rigorous environmental sampling and analysis with community-engaged research approaches. Our work includes water and sediment quality monitoring, ecological impact assessments, and biomarker studies in exposed populations. We collaborate closely with local communities and advocacy organizations to ensure research findings inform policy and remediation efforts.",
+      team: ["Dr. Rachael Chidugu-Ogborigbo", "Mr. Praise Nnaji"],
+      duration: "2015 – Present",
+      publications: 6
+    }
+  },
+  {
+    title: "Cellular Toxicology & Chemical Safety",
+    description: "Investigating cellular and molecular mechanisms of toxicity for chemical risk assessment, including CYP gene cloning in sea sponges as biomarkers of environmental contamination.",
+    image: terrestrialImg,
+    alt: "Cellular toxicology research",
+    fullDetails: {
+      overview: "Understanding how chemicals affect biological systems at the cellular level is fundamental to protecting both human and environmental health. Our cellular toxicology research develops sensitive biomarkers and investigates mechanisms of toxic action, contributing to improved chemical safety assessments.",
+      objectives: [
+        "Clone and characterize CYP genes in sea sponges as biomarkers of pollution exposure",
+        "Elucidate molecular mechanisms underlying chemical toxicity",
+        "Develop cell-based assays for chemical hazard identification",
+        "Support risk assessment frameworks with mechanistic toxicity data"
+      ],
+      methods: "We use a combination of molecular biology, biochemistry, and cell biology techniques. Key approaches include gene cloning and expression analysis, cellular stress response assays, and mechanistic studies using in vitro models. Our biomarker development work integrates field observations with laboratory validation to ensure environmental relevance.",
+      team: ["Dr. Rachael Chidugu-Ogborigbo", "Dr. Silas Fagbero", "Dr. Ibidapo William"],
+      duration: "2017 – Present",
+      publications: 7
     }
   },
 ];
